@@ -1,0 +1,76 @@
+/* Reset CSS */
+
+html,body,h1,h2,h3,h4,h5,h6,p,ol,ul,li,pre,code,address,form,
+fieldset,blockquote,header,footer,section,aside,nav,div,a{
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th, caption{
+  font-weight: normal;
+  text-align: left;
+}
+
+ol{
+  margin-left: 1.4em;
+  list-style: decimal;
+}
+
+ul{
+  margin-left: 1.4em;
+  list-style: square;
+}
+
+img, fieldset{
+  border: 0;
+}
+
+q:before, q:after{
+  content: '';
+}
+
+/* ================================================================================================================= */
+
+/* table{
+margin: 40px auto auto auto;
+
+}  */
+
+/* .center{
+  text-align: center;
+  border: 2px solid red;
+}
+
+p{
+  font-size: 4em;
+} */
+
+/* #commercial{
+  background: violet;
+  width: 100%;
+} */
+
+.mycontainer{
+  background-color:#fafa;
+}
+
+#image1, #image2, #image3{
+  float: left;
+  width: 20vw;
+  margin-top: 5vh;
+  font-size: 40px;
+  text-align: center;
+  opacity: 0.5;
+}
+
+#paragraph_one{
+  margin-top: 70vh;
+  background-color: blueviolet;
+}
