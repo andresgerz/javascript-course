@@ -450,60 +450,162 @@
 //====================================================================================================================
 // JS vs Jquery
 
-$(document).ready(function(){
-  var element=document.querySelectorAll("img");
+// $(document).ready(function(){
+//   var element=document.querySelectorAll("img");
 
-  for(var i=0;i<element.length;i++){
-    element[i].addEventListener("mouseover",toChange, false);
-    element[i].addEventListener("mouseout", original, false);
-  }
+//   for(var i=0;i<element.length;i++){
+//     element[i].addEventListener("mouseover",toChange, false);
+//     element[i].addEventListener("mouseout", original, false);
+//   }
 
-  });
+//   });
 
-function toChange(e){
+// function toChange(e){
 
-  if(e.target==image1){
-    $("#image1").css("opacity","1");
+//   if(e.target==image1){
+//     $("#image1").css("opacity","1");
 
-  }else if(e.target==image2){
-    $("#image2").css("opacity","1");
+//   }else if(e.target==image2){
+//     $("#image2").css("opacity","1");
   
-  }else if(e.target==image3){
-    $("#image3").css("opacity","1");
-  }  
+//   }else if(e.target==image3){
+//     $("#image3").css("opacity","1");
+//   }  
 
-}
+// }
 
-function original(e){
+// function original(e){
 
-  if(e.target==image1){
-    $("#image1").css("opacity","0.5"); 
+//   if(e.target==image1){
+//     $("#image1").css("opacity","0.5"); 
   
-  }else if(e.target==image2){
-    $("#image2").css("opacity","0.5");
+//   }else if(e.target==image2){
+//     $("#image2").css("opacity","0.5");
 
-  }else if(e.target==image3){
-    $("#image3").css("opacity","0.5");
-  }
-}
+//   }else if(e.target==image3){
+//     $("#image3").css("opacity","0.5");
+//   }
+// }
 
+//====================================================================================================================
+// JS vs Jquery
 
+// $(document).ready(function(){
+//   var element=document.querySelectorAll("li");
 
+//   for (var i=0;i<element.length;i++){
+//     element[i].addEventListener("mouseover", change_image , false);
+  
+//     element[i].addEventListener("mouseout", eliminate_image, false);
+//   }
+// })
 
+// function change_image(e){
 
+//   if (e.target==element1){
+//     $("#element1").addClass("emphasise");
+//     $("img").attr("src","images/Plympton1.gif");
 
+//   }else if(e.target==element2){
+//     $("#element2").addClass("emphasise");
+//     $("img").attr("src","images/Plympton2.jpg");
 
+//   }else if(e.target==element3){
+//     $("#element3").addClass("emphasise");
+//     $("img").attr("src","images/Plympton3.jpg");
 
+//   }
+// }
 
+// function eliminate_image(e){
 
+//   if(e.target==element1){
+//     $("#element1").removeClass("emphasise");
+//     $("img").removeAttr("src");
 
+//   }else if(e.target==element2){
+//     $("#element2").removeClass("emphasise");
+//     $("img").removeAttr("src");
 
+//   }else if(e.target==element3){
+//     $("#element3").removeClass("emphasise");
+//     $("img").removeAttr("src");
 
+//   }
+// }
 
+//====================================================================================================================
+// JS vs Jquery
 
+// $(document).ready(function () {
+//   document.getElementById("mybutton").addEventListener("click", toChange, false);
+// });
 
+// function toChange(){
+//   // $("img").fadeOut(1000).fadeIn(1000).width("310"); 
 
+//   $("img").each(function () {
+    
+//     $(this).fadeOut(1000).fadeIn(1000).width("310");
+     
+//   });
+// }
 
+//====================================================================================================================
+// Jquery: Events
+
+// $(document).ready(function () {
+//   $("html").dblclick(function(){
+//     alert("Hallo!");
+//   }); 
+
+//   $("a").mouseover(function () {
+    
+//     var massege="<p>Passing the mouseover!</p>";
+//     $("#main").append(massege);
+    
+//   });
+
+//   $("#a_button").click(function () { 
+//     $(this).val("Stop to click!!");
+    
+//   });
+
+//   $("#the_field").focus(function () { 
+//     $(this).val("Now you go to write");
+    
+//   });
+
+// });
+
+//====================================================================================================================
+// // Jquery: Events
+
+// $(document).ready(function () {
+//   $("#text").hide();
+
+//   $("#image1").hover(function(){
+//     $("#text").show();  }, function(){
+//       $("#text").hide(); 
+//     });
+// });
+ 
+
+// function message_on(){
+//    $("#text").show();
+
+//  }
+
+//  function message_off(){
+//    $("#text").hide();
+//  }
+
+//====================================================================================================================
+// Jquery: Events
+
+$(document).ready(function () {
+    // $("#submenu").hide();
+});
 
 
 
