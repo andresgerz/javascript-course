@@ -604,9 +604,35 @@
 // Jquery: Events
 
 $(document).ready(function () {
-    // $("#submenu").hide();
-});
+    $("#sbm").hide();
+        $("#file").click(function(){
+            $("#sbm").toggle(function () {
+                $("#sbm").show()},
+                function (){$("#sbm").hide() } );
 
+                $("choice1").click(function () {
+                    alert("This is the choice 1");
+                  });
+
+                $("choice2").click(function () {
+                alert("This is the choice 2");
+                });
+
+                $("choice3").click(function () {
+                alert("This is the choice 3");
+                });
+              });
+    
+    
+
+
+// function show_menu(){
+//     $("#sbm").show();
+// }
+
+// function hide_menu(){
+//     $("#sbm").hide();
+// }
 
 
 

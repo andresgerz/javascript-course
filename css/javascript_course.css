@@ -91,22 +91,7 @@ p{
 
 */
 
-li{
-  float: left;
-  list-style: none;
-  
-}
 
-
-li a{
-  background-color: gray;
-  display: block;
-  text-decoration: none;
-  font-weight: bold;
-  border: 1vw thin;
-  color: darkred;
-  background: -webkit-linear-gradient(red,brown);
-}
 /*
 .emphasise{
   background-color: red;
@@ -114,10 +99,7 @@ li a{
 
 } */
  
-body{
-  background-color:darkslategrey;
-  font-size: 2vw;
-}
+
 /*
 header{
   text-align: center;
@@ -145,16 +127,55 @@ form{
   border: 0.1vw solid black;
 } */
 
+
+
+
+
+/* .main_menu{
+  float: left;
+  margin-left: 10vw;
+ 
+} */
+
+#main{ 
+  width: 80vw;
+  margin: auto;
+  margin-top: 8vh;
+}
+
 #submenu{
   position: absolute;
   left: 10vw;
-  top: 40vh;
+  top: 18vh;
+  width: 50vw;
+  height: 10vh;
   z-index: 1;
-  
+
 }
 
-#main_menu{
-  position: absolute;
-  left: 54vw;
-  top: 10vh;
+
+li{
+  float: left;
+  width: 25vw; 
+  list-style: none;
+  text-align: center;
+  border: 0.1vw solid black;
+  /* margin: 0 10vw; */
+}
+
+
+li a{
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2vw;
+  border: 1vw thin;
+  color: white;
+  padding: 2vh 6vw;
+  background: -webkit-linear-gradient(gray, black);
+}
+
+body{
+  background-color:rgb(187, 253, 255);
+  font-size: 2vw;
 }
