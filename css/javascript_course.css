@@ -177,5 +177,36 @@ li a{
 
 body{
   background-color:rgb(187, 253, 255);
-  font-size: 2vw;
+  font-size: 4vw;
+  
+}
+
+#main{
+  text-align: center;
+}
+
+h3, p{
+  font-size: 1.5vw;
+  color: blue;
+  text-align: left;
+}
+
+#picture{
+  border: 0.1vw solid black;
+  background: white;
+}
+
+#big-image{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 560px;
+  height: 420px; 
+  border: 0.5vw dotted blueviolet;
+
+}
+
+table{
+  float: right;
 }

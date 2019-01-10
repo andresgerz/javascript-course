@@ -606,26 +606,29 @@
 $(document).ready(function () {
     $("#sbm").hide();
         $("#file").click(function(){
-            $("#sbm").toggle(function () {
-                $("#sbm").show()},
-                function (){$("#sbm").hide() } );
+            $("#sbm").toggle();
+        });
+    }); 
 
-                $("choice1").click(function () {
-                    alert("This is the choice 1");
-                  });
+    // This lines of code don't function
+            // $("#sbm").toggle(function () { 
+            //     $("#sbm").show()},
+            //     function (){$("#sbm").hide() } );
 
-                $("choice2").click(function () {
-                alert("This is the choice 2");
-                });
+            //     $("choice1").click(function () {
+            //         alert("This is the choice 1");
+            //       });
 
-                $("choice3").click(function () {
-                alert("This is the choice 3");
-                });
-              });
+            //     $("choice2").click(function () {
+            //     alert("This is the choice 2");
+            //     });
+
+            //     $("choice3").click(function () {
+            //     alert("This is the choice 3");
+            //     });
+            //   });
     
     
-
-
 // function show_menu(){
 //     $("#sbm").show();
 // }
@@ -634,13 +637,69 @@ $(document).ready(function () {
 //     $("#sbm").hide();
 // }
 
+//====================================================================================================================
+// Jquery: Events
+
+// canvas
+
+function begin(){
+    var element = document.getElementById("picture");
+    picture = element.getContext("2d");
+    // picture.fillStyle = "blue";
+    // picture.fillRect(50,50,50,50);
+    picture.moveTo(50,50);
+    picture.lineTo(0,50);
+    
+    picture.stroke();
+}
+
+window.addEventListener("load", begin, false);
+
+//Jquery
+
+$(document).ready(function () {
+    $(".answer").hide(); 
+    $("#main h3").click(function () {
+        $(this).next(".answer").fadeToggle();
+    });
+     
+  });
+
+//====================================================================================================================
+// Jquery: Events
+
+// $(document).click(example);
+
+//   function example(e){
+//       alert(e.clientX);
+//   }
 
 
+$(document).ready(function () {
+
+    $("#big-image").hide();
+    $("#beakman").on("click", open_image); 
+  
+    $("#big-image, p, br").on("click", close_image);
+    // $("div").not("#big-image, #beakman").on("click", close_image);
+    console.log("1");
+});
 
 
+function open_image(e) {
+    
+    var imag = $("#beakman").attr("src");
+    $("#big-image").fadeIn(1000);
+    $("#replacement-image").replaceWith("<img src='" + imag + "' width='560' height='420' >");
+    console.log("2");
+}
 
 
-
-
-
+function close_image(e) {
+   
+    $("#big-image").fadeOut(1000);
+   
+    console.log("3");
+    
+}
 
