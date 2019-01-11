@@ -210,3 +210,32 @@ h3, p{
 table{
   float: right;
 }
+
+#title-main{
+  text-align: center;
+  background: orange;
+
+}
+
+#login{
+  width: 25vw;
+  height: 25vh;
+  font-size: 1vw;
+  background: skyblue;
+  margin: auto;
+  margin-top: 2vh;
+}
+
+#login form{
+  margin: 4vh;
+  border: 0.1vw solid black;
+  display: none;
+}
+
+#open-login{
+  color: black;
+}
+
+#login .close{
+  background: red;
+}

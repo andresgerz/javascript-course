@@ -703,3 +703,13 @@ function close_image(e) {
     
 }
 
+//====================================================================================================================
+// Jquery: animations
+
+$(document).ready(function(){
+    $("#open-login").click(function(){
+        $("#login form").slideToggle(300);
+        $(this).toggleClass("close");
+        
+    });
+});
