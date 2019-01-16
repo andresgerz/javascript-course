@@ -3,12 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>Course JavaScript</title>
-<link rel="stylesheet" href="css/javascript_course.css">
+  <link rel="stylesheet" href="css/javascript_course.css">
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-<script
+<!-- <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> --> 
+
+  <!-- <link rel="stylesheet" href="jquery/jquery.fancybox-1.3.4.css"> -->
+  
+  <!-- <script href="jquery/jquery.fancybox-1.3.4.js"></script> -->
+  <!-- <script src="jquery/jquery-1.6.3.min.js"></script>  -->
+
+
+
+<!-- <link rel="stylesheet" href="jquery/jquery.fancybox.min.css" />  -->
+
+
 </head>
 <body class="center">
 
@@ -79,8 +90,53 @@
   </div>
 </div>
 
+<hr>
+<!-- ====================================================================================================================================-->
 
+ <img src="images/backtothefuture-delorean.jpg" width="364" height="135" id="image-animate">
+<hr>
+<!-- ====================================================================================================================================-->
 
+<img src="images/backtothefuture-delorean.jpg" width="364" height="135" id="image-animate2">
+<h1 id="description">Delorean of back to the future</h1>
+
+<hr>
+<!-- ====================================================================================================================================-->
+
+<img src="images/windowdrops.jpg" width="50%" height="50%" id="image-visibility">
+<hr>
+
+<!-- ====================================================================================================================================-->
+
+<div id="gallery-fancybox">
+  
+  <a href="images/Plympton1.gif" data-fancybox="gallery"><img src="images/Plympton1.gif" width="100" height="100"></a>
+  <a href="images/Plympton2.jpg" data-fancybox="gallery"><img src="images/Plympton2.jpg" width="100" height="100"></a>
+  <a href="images/Plympton3.jpg" data-fancybox="gallery"><img src="images/Plympton3.jpg" width="100" height="100"></a>
+
+</div>
+<hr>
+
+<!-- ====================================================================================================================================
+jquery: events, bar move-->
+<a href="https://www.google.es" id="my-link">Login</a>
+
+<form method="post" id="my-form">
+  <table width="25%" border="0">
+    <tr><td>User</td>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield"></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2"></td>
+    </tr>
+    <tr>
+      <td><input type="submit" value="Send"></td>
+    </tr>
+  </table>
+</form>
 
 
 <!-- ====================================================================================================================================
@@ -233,7 +289,14 @@ jquery: events, bar move
 
 
 
-<script src="js/javascript_course.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+<script src="jquery/jquery.fancybox.js"></script> 
+<script src="js/javascript_course.js"></script> 
+
 
 
 </body>

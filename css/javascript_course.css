@@ -238,4 +238,9 @@ table{
 
 #login .close{
   background: red;
+  border: 0.15vw dashed black;
+}
+
+#image-visibility{
+  opacity: 0.2;
 }
