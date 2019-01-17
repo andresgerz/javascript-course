@@ -824,7 +824,7 @@
 // });
 
 //====================================================================================================================
-// emergent windows 
+// emergent windows don't function
 
 $(document).ready(function (e) {
     $("#my-form").hide();
@@ -838,4 +838,41 @@ $(document).ready(function (e) {
         
 
     })
+});
+
+//====================================================================================================================
+// emergent windows: make a bucle
+
+$(document).ready(function (e) {
+    var propVent="width=400, height=400, left=0, top=0";
+
+    var myWindow=open("https://twitter.com/SMN_Argentina","Meteorology", propVent);  
+
+    $("#button-close").click(function (e) {
+        e.preventDefault();
+        
+        myWindow.close();
+     });
+});
+
+//====================================================================================================================
+// Iframe
+
+$(document).ready(function () {
+    ("#pulse").click(function(e){
+        e.preventDefault();
+
+        $("#extern").attr("src","http://portalweb.cammesa.com/default.aspx"); 
+    })    
+});
+
+//====================================================================================================================
+// Iframe
+
+$(document).ready(function () {
+    $(".iframe").fancybox({
+        width:"90%",
+        height:"90%",
+        titlePosition: "Outside"
+    });    
 });
