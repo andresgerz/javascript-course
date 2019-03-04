@@ -154,7 +154,7 @@ form{
 }
 
 
-li{
+div li{
   float: left;
   width: 25vw; 
   list-style: none;
@@ -164,7 +164,7 @@ li{
 }
 
 
-li a{
+div li a{
   display: block;
   text-decoration: none;
   font-weight: bold;
@@ -243,4 +243,31 @@ table{
 
 #image-visibility{
   opacity: 0.2;
+}
+
+#websites{
+  font-weight: bold;
+  color: goldenrod;
+  background: yellow;
+  text-align: center;
+}
+
+#webs-ajax{
+  margin-top: 20vh;
+  border: 0.1vw dotted green;
+  width: 70vw;
+  height: 5vh;
+}
+
+ul li{
+  margin: 1vh 0 0 2vw;
+  font-size: 1vw;
+  width: 20vw;
+  float: left;
+  list-style: none;
+}
+
+#extern-container{
+  border: 0.2vw dashed saddlebrown;
+  height: 100vh;
 }

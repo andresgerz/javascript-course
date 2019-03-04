@@ -338,6 +338,30 @@
 // alert("You have to write 2 numbers")
 // }
 
+
+//====================================================================================================================
+// Javascrip: Exceptions
+
+// const n1=12;
+// const n2=0;
+
+// try {
+  
+//   if(n2==0){
+//     throw "The denominator can't be the number zero";
+//   }
+
+//   let division = n1/n2;
+//   console.log(division);
+
+// } catch (err) {
+//   console.error(err);
+
+// }finally{
+//   console.log("Division finished");
+// }
+
+
 //====================================================================================================================
 // JS vs Jquery        
 
@@ -826,53 +850,402 @@
 //====================================================================================================================
 // emergent windows don't function
 
-$(document).ready(function (e) {
-    $("#my-form").hide();
+// $(document).ready(function (e) {
+//     $("#my-form").hide();
 
-    $("#my-link").click(function(e){
-        $("#my-form").faceIn(1000);
+//     $("#my-link").click(function(e){
+//         $("#my-form").faceIn(1000);
 
-        e.preventDefault();
-        // return false;
-        console.log("tester");
+//         e.preventDefault();
+//         // return false;
+//         console.log("tester");
         
 
-    })
-});
+//     })
+// });
 
 //====================================================================================================================
 // emergent windows: make a bucle
 
-$(document).ready(function (e) {
-    var propVent="width=400, height=400, left=0, top=0";
+// $(document).ready(function (e) {
+//     var propVent="width=400, height=400, left=0, top=0";
 
-    var myWindow=open("https://twitter.com/SMN_Argentina","Meteorology", propVent);  
+//     var myWindow=open("https://twitter.com/SMN_Argentina","Meteorology", propVent);  
 
-    $("#button-close").click(function (e) {
-        e.preventDefault();
+//     $("#button-close").click(function (e) {
+//         e.preventDefault();
         
-        myWindow.close();
-     });
-});
+//         myWindow.close();
+//      });
+// });
 
 //====================================================================================================================
 // Iframe
 
-$(document).ready(function () {
-    ("#pulse").click(function(e){
-        e.preventDefault();
+// $(document).ready(function () {
+//     ("#pulse").click(function(e){
+//         e.preventDefault();
 
-        $("#extern").attr("src","http://portalweb.cammesa.com/default.aspx"); 
-    })    
-});
+//         $("#extern").attr("src","http://portalweb.cammesa.com/default.aspx"); 
+//     })    
+// });
 
 //====================================================================================================================
 // Iframe
 
-$(document).ready(function () {
-    $(".iframe").fancybox({
-        width:"90%",
-        height:"90%",
-        titlePosition: "Outside"
-    });    
-});
+// $(document).ready(function () {
+//     $(".iframe").fancybox({
+//         width:"90%",
+//         height:"90%",
+//         titlePosition: "Outside"
+//     });    
+// });
+
+// console.log("Horaaaa!!10");
+
+// $(document).ready(function () {
+//     var zeit = new Date();
+    
+//     document.write(zeit);
+  
+//     var hour = zeit.getHours();
+//     var minute = zeit.getMinutes();
+//     var second = zeit.getSeconds();
+
+//     var dayOfWeek = zeit.getDay();
+//     console.log("The day is: " + dayOfWeek);
+
+//     var date = zeit.getDate();
+//     var month = zeit.getMonth();
+//     var year = zeit.getFullYear();
+
+//     function clock(){
+//         document.write(dayOfWeek + " " + date + " de " + month + " del " + year + "    " + hour +":"+ minute +":"+ second + ";");
+//     }
+    
+// });
+
+//====================================================================================================================
+// AJAX
+
+//  $(document).ready(function () {
+     
+//     $("#webs-ajax a").click(function(){
+
+//         $("#extern-container").load("C:/Users/mellisos/Desktop/Programming/HTML_CSS_JS/meteorology.html");
+
+//         return false;
+
+
+        
+//     })
+//  });
+
+//====================================================================================================================
+// AJAX JQuery: get() and post()
+
+// $(document).ready(function () {
+    
+//     $("#login-form").submit(function () { 
+        
+//         // var data_form = {
+
+//         //     user:$("#user").val(),
+//         //     password:$("#password").val()}
+        
+//         var data_form = $(this).serialize();
+
+//         $.get("login.php", data_form, dataProcess).error(errorProcess);
+
+//         return false;
+    
+//     });
+
+//     function dataProcess(){
+
+//         if(dataProcess==""){
+
+//             $("#extern-contain").html("<p> User right. Welcome to way </p>");
+//         }else{
+//             $("#extern-contain").html("<p> User don't authorized. Welcome to way </p>");
+//         }
+//     }
+
+//     function errorProcess(){
+
+//         var messageError = "There is an error";
+
+//         $("#extern-contain").html("<p>" + messageError + "</p>");
+
+//     };
+// });
+
+
+//===============================================================================================================================================
+//===============================================================================================================================================
+//===============================================================================================================================================
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: to define variables
+
+// var name = 'beakman';
+// var name = 'bill';
+// console.log('Hello ' + name);
+
+// let variable = 'car';
+// let variable = 'bike';
+// console.log('this is a ' + variable);
+
+// const colour = 'blue';
+// const colour = 'red';
+// console.log('this is ' + colour)
+
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: 
+
+// var age = 18;
+
+// if(age >= 18){
+//   var isAdult = true;
+// };
+// console.log(isAdult);
+
+
+// const years = 18;
+
+// if(years >= 18){
+//   const heIsAdult = true;
+//   console.log(heIsAdult);
+// }
+// console.log(heIsAdult);
+
+
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: const vs let
+
+// let brand = "Ford";
+// brand = "Audi";
+// console.log(brand);
+
+// const brand2 = "BMW";
+// brand2 = "Peugeot";
+// console.log(brand2);
+
+// const arrayMobil = ["cars","trucks"];
+// arrayMobil.push("bikes");
+// console.log(arrayMobil);
+
+
+  document.getElementById("var").innerHTML = "var --> DON'T USE!";
+  document.getElementById("let").innerHTML = "let --> THIS USE IF I WANT TO CHANGE THE VALUE AFTER";
+  document.getElementById("const").innerHTML = "const --> IF I WAN'T TO CHANGE THE VALUE NEVER";
+  
+    
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: const vs let
+
+// const name = "Georgina";
+// const age = 24;
+// const country = "Uruguay";
+
+// console.log("The person is " + name + ", has " + age + " years old and she's from " + country);  //Javascript
+
+// console.log(`The person is ${name}, hat ${age} years old and she's from ${country}`);     // ES6
+
+
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: arrow functions
+
+// const names = ['Edgar', 'Katalina', 'Sandra', 'Sicilio'];
+
+// //Conventional fuction
+// const numberCharacthers = names.map(function(names){
+//   console.log(`${names} has ${names.length} numbers of characters`);
+// });
+
+// //arrow functions
+
+// (parameter) => {
+//   return //code to ejecute
+// }
+
+// //only an argument
+// const numberCharacthers = names.map( names => `${names} has ${names.length} numbers of characters`);
+
+// console.log(numberCharacthers);
+
+
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: arrow functions
+
+// function signUser(name, country = 'dont specify', mail, telephone = 'Dont specify'){
+
+ 
+//   return `Name: ${name}, Country: ${country}, Mail: ${mail}, Telephone: ${telephone}`;
+// } 
+
+// console.log(signUser('Gardel', undefined, 'gardel@tango.com.ar', ));
+
+
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: to restructure arrays
+
+// const person = ['Argentina', 42, 'Deutsch', 'Viktor'];
+
+// const [country, age = 'No specify', language, name] = person;
+
+// const showInfo = ([country, , ,name] = person) => console.log(country, name);
+
+// showInfo(person);
+
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: to restructure objects
+
+// const user = {
+//   name: 'Juan Carlos Pistarini',
+//   mail: 'fulano@fulano.com',
+//   age: 30,
+//   country: 'Argentina',
+//   profession: 'engineer'
+// }
+
+// const {name, mail, address = 'No specify'} = user; 
+
+// const showData = ({name, profession}) => console.log(`${name} is ${profession} with address ${address}`);
+// showData(user);
+
+
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: Class and inheritance
+
+// class User{
+//   constructor(name, age, email){
+//     this.name = name,   
+//     this.age = age,    
+//     this.email = email
+
+//   }
+
+//   showGreeting(message){
+//     return message;
+//   }
+
+//   showInfo(){
+//     return `
+//         <b>Name:</b> ${this.name} <br />
+//         <b>Age:</b> ${this.age} <br />
+//         <b>Email:</b> ${this.email} <br />
+//         <hr />
+//     `;
+//   }
+// }
+
+// const Edward = new User("Edward", 28, "edward1112@correo.com");
+// document.write(Edward.showInfo());
+
+// class Student extends User{
+//   constructor(name, age, email, degree){
+//     super(name, age, email);
+//     this.degree = degree;
+//   }
+//   showInfo(){
+//     return `
+//         <b>Name:</b> ${this.name} <br />
+//         <b>Age:</b> ${this.age} <br />
+//         <b>Email:</b> ${this.email} <br />
+//         <b>Degree:</b> ${this.degree} <br />
+//         <hr />
+
+//     `;
+//   }
+// }
+
+
+// const Alexander = new Student("Alexander", 25, "alexarg25@correo.com", "Web Developer");
+// document.write(Alexander.showInfo());
+
+
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: new ways for to work with objects
+
+// const createObject = (name, age) => {
+//   return{
+//     name,
+//     age,
+
+//     showDate(){
+//       return `${name} has ${age} years old`;
+//     }
+//   }
+// } 
+
+// console.log(createObject("Hermann", 38).showDate());
+
+
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: parameters rest
+
+// const showInfo = (...data) => {
+//   console.log(data);
+// };
+
+// showInfo('Hermann', 29, 'Hesse', 'Deutschland');
+
+
+// //===============================================================================================================================================
+// //ECMASCRIPT6 ES6: parameters spread
+
+// const arrayData = [ 'Albert', 33, 'Einstein', 'Deutschland'];
+// showInfo(...arrayData); 
+
+
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: promises to work with AJAX
+
+// const prom = new Promise((resolve, reject) => {
+
+//   setTimeout(() => {
+//             //this simulate AJAX
+//     const success = true;
+
+//     if(success){
+//       resolve('The operation was success');
+//     }else{
+//       reject("The operation wasn't success");
+//     }
+//   }, 4000); 
+
+  
+// });
+
+// prom.then((message) => {
+//   alert(message);
+// });
+
+// prom.catch((message) => {
+//   alert(message);
+// });
+
+
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: new methodes for strings and arrays
+
+// const text = 'Hello world, weather';
+
+// console.log(text, 'begin with h:', text.toLowerCase().startsWith('h'));
+
+// console.log(text, 'ending with d:', text.toLowerCase().startsWith('d'));
+
+// console.log(text, 'include the word weather:', text.includes('weather'));
+
+// const friends = ['Stan', 'Kenny', 'Eric', 'Kyle', 'Towelie'];
+
+// console.log(friends.includes('Eric'));
+
+// console.log(friends.find(friend => friend.length > 6 ));
+
+// console.log(friends.findIndex( friend => friend === 'Towelie'));
+
+
+//===============================================================================================================================================
+//ECMASCRIPT6 ES6: new methodes for strings and arrays
+
