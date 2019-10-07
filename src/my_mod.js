@@ -1,0 +1,1 @@
+exports.f = x => x+2;

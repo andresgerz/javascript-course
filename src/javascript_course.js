@@ -1035,9 +1035,9 @@
 // console.log(arrayMobil);
 
 
-  document.getElementById("var").innerHTML = "var --> DON'T USE!";
-  document.getElementById("let").innerHTML = "let --> THIS USE IF I WANT TO CHANGE THE VALUE AFTER";
-  document.getElementById("const").innerHTML = "const --> IF I WAN'T TO CHANGE THE VALUE NEVER";
+  // document.getElementById("var").innerHTML = "var --> DON'T USE!";
+  // document.getElementById("let").innerHTML = "let --> THIS USE IF I WANT TO CHANGE THE VALUE AFTER";
+  // document.getElementById("const").innerHTML = "const --> IF I WAN'T TO CHANGE THE VALUE NEVER";
   
     
 //===============================================================================================================================================
@@ -1247,5 +1247,289 @@
 
 
 //===============================================================================================================================================
-//ECMASCRIPT6 ES6: new methodes for strings and arrays
+// AJAX: JSON array and nested JSON
+// var result = document.getElementById('info');
+// function executeAJAX(){
+//   var ajaxRequest;
 
+//   if(window.XMLHttpRequest){
+//      ajaxRequest = new XMLHttpRequest();
+//    }else{
+//      ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+//    }
+
+//   ajaxRequest.onreadystatechange = function () {
+//     if(ajaxRequest.readyState === 4 && ajaxRequest.status === 200){
+//       var datas = JSON.parse(ajaxRequest.responseText);
+//       alert(ajaxRequest.responseText);
+      
+//       if(result.innerHTML === ""){
+          
+//         for (var i in datas){
+//           result.innerHTML += "<h4>" + i + "</h4>";
+
+//           var person = datas[i];
+
+//           for(var j in person){
+//             result.innerHTML += j + ": " + person[j] + "<br/>";
+//           }
+//         }
+//       }
+
+
+//       var ageMinor = toFindAgeMinor(datas);
+//       result.innerHTML += "<br/><b> The age minor is: <b/>" + ageMinor;
+//     }
+//     }
+
+//     ajaxRequest.open("GET","http://localhost:3000/user", true);
+//     ajaxRequest.send();
+// }
+
+// function toFindAgeMinor(objectJSON){
+  
+//   var Array = [];
+  
+//   for(var i in objectJSON){
+
+//     var person = objectJSON[i];
+//     Array.push(person.age);
+
+//   }
+//   var ageMinor = Math.min.apply(null, Array);
+
+//   return ageMinor;
+// }
+
+//===============================================================================================================================================
+// AJAX: Find the temperature max of 16 days
+
+//   var result = document.getElementById(info);
+
+//   function ajax_get_json() {
+//     console.log("funktioniert!");
+//     var xmlhttp;
+
+//     if (window.XMLHttpRequest) {
+//       xmlhttp = new XMLHttpRequest();
+//     } else {
+//       xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+//     }
+
+//     xmlhttp.onreadystatechange = function() {
+//       if(xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+//         var data = JSON.parse(xmlhttp.responseText);
+//         console.log(data.cnt);
+//         var temp_max = findTempMax(data);
+//         result.innerHTML += "The temperature maximun is: " + temp_max;
+//       }
+//     }
+//     xmlhttp.open("GET","http://api.openweathermap.org/data/2.5/forecast?id=3433955&APPID=6200f7fd2611fa3c695ade64a041d5f7", true);
+//     console.log(xmlhttp);
+//     xmlhttp.send();
+//   }
+
+// function findTempMax(Tmax) {
+//   var arraytemps = [];
+
+//   for(var i in Tmax) {
+//     var day = Tmax[i];
+//     arraytemps.push(day.cnt);
+//   }
+
+//   return arraytemps;
+// }
+
+//===============================================================================================================================================
+// Node.js: modules and require
+
+// const os = require('os');
+// const fs = require('fs');
+
+// let cpu = os.cpus();
+// let system = os.platform();
+// let user = os.hostname();
+
+// let cpu_string = JSON.stringify(cpu);
+// fs.appendFile('mitocode.txt', `Information of CPU ${cpu_string}`, function(error){
+//   if(error){
+//     console.log("Error to create the file");
+//   }
+// })
+
+// console.log(cpu);
+// console.log(system);
+// console.log(user);
+
+
+//===============================================================================================================================================
+// Node.js: require and export
+
+// const myfile = require('./myfile');
+
+// console.log(myfile.cars);
+
+// // myfile.greeting();
+
+// myfile.time();
+
+
+//===============================================================================================================================================
+// Node.js: file system
+
+// const fs = require('fs');
+
+//Asynchrono:
+// console.log('starting');
+
+// fs.readFile('data.txt','utf-8', (error, data) => {
+//   if(error){
+//     console.log(`Error ${error}`);
+//   }else{
+//     console.log(data);
+//   }
+// });
+
+// console.log('finishing');
+
+//Synchoron
+
+// console.log('starting 2');
+
+// let data = fs.readFileSync('data.txt', 'utf-8');
+// console.log(data);
+
+// console.log('finishing 2');
+
+// Asynchrono rename
+// fs.rename('data.txt', 'data_rename.txt', (error) => {
+//   if(error) throw error;
+//   console.log('Rename!');
+// });
+
+
+// Synchrono rename
+// fs.appendFile('data.txt', '\n Thanks for subcribe', (error) => {
+//   if (error) console.log(`Error ${error}`);
+// });
+
+
+// fs.unlink('data2.txt', (error) =>{
+//   if (error) throw error;
+//   console.log('Removed');
+// });
+
+// fs.createReadStream('data.txt').pipe(fs.createWriteStream('data3.txt'));
+
+
+// //Asynchrono
+// fs.readdir('./../../javascript_course/src', (error, files) => {
+//   files.forEach(file => {
+//     console.log(file);
+//   });
+// });
+
+
+//Synchrono
+// fs.readdirSync('./../../javascript_course/src').forEach(file => {
+//   console.log(file);
+// });
+
+// console.log('finished');
+
+//===============================================================================================================================================
+// Node.js: file system
+
+// const _ = require('lodash');
+
+// let commad = process.argv[2];
+
+
+// if(commad === "user"){
+//   if(process.argv[3] === "bonoU2" ){
+
+//     let x = { "name": "Martin" }
+//     let y = { "nickname": "bonoU2" }
+//     let z = [
+//       { name: "Martin", surname: "Miller", age: 42 },
+//       { name: "Bono", surname: "U2", age: 42 }
+//     ]
+// // }
+// let result = _.assign(x, y);
+// console.log(result);
+
+
+// _.times(3, () => console.log("complete"));
+
+//     let result = _.find(z, { name: "Martin", surname: "Miller" } );
+//     console.log(result);
+//     }else{
+//       console.log("User no valid");
+//     };
+// }
+
+//===============================================================================================================================================
+// HTTP Request
+
+// const request = require('request');
+// const argv = require('yargs').argv;
+
+// let direction = argv.direction;
+// let url = `http://maps.googleapis.com/maps/api/geocode/json?address=${direction}`;
+
+  
+// request({
+//   url: url,
+//   json: true
+// },(error, response, body)=>{
+//   console.log(body);
+// });
+
+//===============================================================================================================================================
+// HTTPS API Github
+
+// const https = require('https');
+
+// let username = 'andresgerz';
+
+// //http://www.useragentstring.com/pages/useragentstring.php
+// let CHROME_USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36';
+// let FIREFOX_USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1';
+// let IE_USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; AS; rv:11.0) like Gecko';
+
+// let options = {
+//   host: 'api.github.com',
+//   path: '/users/' + username,
+//   method: 'GET',
+//   headers: { 'user-agent': CHROME_USER_AGENT },
+// };
+
+// let request =  https.request(options, (response) => {
+//   let body = '';
+
+//   response.on('data', (out) => {
+//     body += out;
+//   });
+
+//   response.on('end',(out) => {
+//     let json = JSON.parse(body);
+//     console.log(json);
+//   });
+// });
+
+// request.on('error', (e) => {
+//   console.log(e);
+// });
+
+// request.end();
+
+//===============================================================================================================================================
+// Node.js
+
+'use strict'
+let x = 1;
+this.y = 2;
+console.log(this.y=3);
+
+//let x = require("./my_mod.js")
+//console.log(x.f(1));
